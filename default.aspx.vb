@@ -91,11 +91,9 @@ Partial Class _Default
 
     End Sub
 
-    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Clear.Click
+    Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         'clear
-        tbLoanAmt.Text = String.Empty
-        tbAnnualInterest.Text = String.Empty
-        tbLoanTerm.Text = String.Empty
-        loanGridView.EmptyDataText = String.Empty
+        Response.Redirect("default.aspx")
+        
     End Sub
 End Class

@@ -17,6 +17,7 @@
      
         Loan Amount:<asp:TextBox ID="tbLoanAmt" runat="server" ></asp:TextBox>
         <span class="errormessage">
+             <br />
              <asp:RequiredFieldValidator ID="tbLoanAmount" runat="server"
                    ControltoValidate ="tbLoanAmt"
                    ErrorMessage ="Please enter a valid Loan Amount :P">
@@ -27,9 +28,10 @@
         
         Annual Interest %: <asp:TextBox ID="tbAnnualInterest" runat="server" ></asp:TextBox>
                <span class="errormessage">
+               <br />
                <asp:RequiredFieldValidator ID="tbAnnInt" runat="server"
                     ControltoValidate ="tbAnnualInterest"
-                    ErrorMessage ="Please enter a valid Annual Interest % e.g. please enter 2 for 2%">
+                    ErrorMessage ="Please enter a valid Annual Interest % (please enter 2 for 2%)">
 
                </asp:RequiredFieldValidator>
                   
@@ -38,32 +40,34 @@
 
         Loan Term (Yrs): <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
         <span class="errormessage">
+               <br />
                <asp:RequiredFieldValidator ID="tbTerm" runat="server"                   ControltoValidate ="tbLoanTerm"
-                ErrorMessage ="Please enter a valid Loan Term. e.g. Please enter 2 for 2years">
+                ErrorMessage ="Please enter a valid Loan Term. (Please enter 2 for 2years)">
 
                 </asp:RequiredFieldValidator>
                   
             </span>
-      <br /> <br />
-     
-    Loan Start Date: <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+      <br /> 
         
         <br /><br />
 
         <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" />
         
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Clear" runat="server" Text="Button" />
+        <asp:Button ID="btnClear" runat="server" Text="Clear" />
+     
+
+    
+            
+        <br />
         
-        <br /><br />
-                
+            
         Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
         
         <br /><br />
         
         <asp:GridView ID="loanGridView" runat="server" />
-            
-        </div>
+      
     </form>
 </body>
 </html>
