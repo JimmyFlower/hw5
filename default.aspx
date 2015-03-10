@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="default.aspx.vb" Inherits="_Default" %>
 
 <!DOCTYPE html>
-
+<html lang="en">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
    
@@ -69,18 +69,22 @@
      
 
     
-            
-        <br />
+
+        <% If Not IsPostBack Then%>
+
+        Welcome to my mortgage calculator. Please complete the fields above to have your monthly payment and loan repayment schedule calculated for you.
+
+        <% Else%>
+           
+        <div id="results">
+        <p id="results_title">
+        Monthly Payment: <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+        </p>
         
-            
-        Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server" ></asp:Label>
-        
-        <br /><br />
+        <asp:GridView ID="loanGridView" runat="server" CssClass="gridview" />
         </div>
-        <div>
-        
-        <asp:GridView class= "cssgirdview" ID="loanGridView" runat="server" CssClass="cssgirdview" />
-      </div>
+
+        <% End If%>
     </form>
 </body>
 </html>

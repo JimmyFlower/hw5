@@ -1,10 +1,10 @@
 ﻿body {
-    background-color: pink ; 
-    color: black;
+    background-color: #FFCF73 ; 
+    color: A64800;
     margin:auto;
         width: 60%
 }
-
+h1{color:#FF6F00}
 .bold {
     font-weight:bold ;
 }
@@ -29,8 +29,8 @@
 {
 padding:10px; 
 color:black; 
-background-color:lightpink; 
-border: solid 4px #00ffff;
+background-color:#FF6F00; 
+border: solid 4px #FFB073;
 text-align :center ; 
 }
 
@@ -38,8 +38,9 @@ text-align :center ;
 {
 padding:10px; 
 color:black ; 
-background-color:darkgreen ;
+background-color:#FFBD40 ;
 text-align :center ; 
-border: solid 3px #CCE881;
+border: solid 3px #FFB073;
 }
 
+.cssgridview .alt{background-color:#FF9340;

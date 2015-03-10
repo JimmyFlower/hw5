@@ -11,8 +11,7 @@ Partial Class _Default
         Dim term As Integer
         Dim loanTerm As Integer
         Dim monthlyPayment As Double
-        Dim newloan As Double
-        Dim total As Double
+       
         Dim currentdate As Date = Now
 
         'This section is declaring the variables for loan amortization.
@@ -58,8 +57,7 @@ Partial Class _Default
 
         'This section uses the for loop to display the loan balance and interest paid over the term of the loan.
         Dim counterStart As Integer
-        'calculate total
-        total = loanTerm * monthlyPayment
+    
 
         For counterStart = 1 To loanTerm
 
@@ -74,10 +72,10 @@ Partial Class _Default
             'Writes the data to a new row in the gridview.
             tRow = loanAmortTbl.NewRow()
             tRow("Payment Number") = String.Format(counterStart)
-            tRow("Payment Date") = String.Format(currentdate, "MM/dd/yyyy")
+            tRow("Payment Date") = String.Format("{0:MM/dd/yyyy}", currentdate)
             tRow("Principal Paid") = String.Format("{0:C}", principal) ' String.Format("{0:C},principal) formats the variable "prinicpal" as currency (C).
             tRow("Interest Paid") = String.Format("{0:C}", interestPaid)
-            tRow("New Balance") = String.Format("{0:C}", newloan)
+            tRow("New Balance") = String.Format("{0:C}", nBalance)
             loanAmortTbl.Rows.Add(tRow)
 
             'Loops to next counterStart (Continues loop until counterStart requirements are met (loanTerm)).
