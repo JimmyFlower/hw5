@@ -68,14 +68,13 @@ Partial Class _Default
             principal = monthlyPayment - interestPaid
             nBalance = loanAmount - principal
             loanAmount = nBalance
-            newloan = total - monthlyPayment
-            total = newloan
+            
             currentdate = currentdate.AddMonths(1)
 
             'Writes the data to a new row in the gridview.
             tRow = loanAmortTbl.NewRow()
             tRow("Payment Number") = String.Format(counterStart)
-            tRow("Payment Date") = String.Format("{0:d}", currentdate)
+            tRow("Payment Date") = String.Format(currentdate, "MM/dd/yyyy")
             tRow("Principal Paid") = String.Format("{0:C}", principal) ' String.Format("{0:C},principal) formats the variable "prinicpal" as currency (C).
             tRow("Interest Paid") = String.Format("{0:C}", interestPaid)
             tRow("New Balance") = String.Format("{0:C}", newloan)

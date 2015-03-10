@@ -1,0 +1,45 @@
+﻿body {
+    background-color: pink ; 
+    color: black;
+    margin:auto;
+        width: 60%
+}
+
+.bold {
+    font-weight:bold ;
+}
+
+#loanGridView{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.cssgirdview{
+    width:auto; 
+    margin : 5px 0 10px 0; 
+
+    text-align :center ; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black;
+}
+
+
+.cssgirdview td 
+{
+padding:10px; 
+color:black; 
+background-color:lightpink; 
+border: solid 4px #00ffff;
+text-align :center ; 
+}
+
+.cssgirdview th 
+{
+padding:10px; 
+color:black ; 
+background-color:darkgreen ;
+text-align :center ; 
+border: solid 3px #CCE881;
+}
+

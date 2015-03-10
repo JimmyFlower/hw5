@@ -4,14 +4,20 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
-
+   
+     <title>Jimmy's Mortgage Calculator</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 155px;
+        }
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div class="bold">
     
-    Jimmy's Mortgage Calculator
+ <h1>Jimmy's Mortgage Calculator</h1>
         
         <br /><br />
      
@@ -51,10 +57,15 @@
         
         <br /><br />
 
-        <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" />
+        <asp:Button ID="btnCalcPmt" runat="server" Text="Calculate" CssClass="auto-style1" />
         
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnClear" runat="server" Text="Clear" />
+        <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="auto-style1" />
+     
+
+    
+            
+        <br />
      
 
     
@@ -62,12 +73,14 @@
         <br />
         
             
-        Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server"></asp:Label>
+        Monthly Payment: &nbsp; <asp:Label ID="lblMonthlyPmt" runat="server" ></asp:Label>
         
         <br /><br />
+        </div>
+        <div>
         
-        <asp:GridView ID="loanGridView" runat="server" />
-      
+        <asp:GridView class= "cssgirdview" ID="loanGridView" runat="server" CssClass="cssgirdview" />
+      </div>
     </form>
 </body>
 </html>
