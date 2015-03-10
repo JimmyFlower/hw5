@@ -24,6 +24,9 @@
         <br /><br />
 
         Loan Term (Yrs): <asp:TextBox ID="tbLoanTerm" runat="server" ></asp:TextBox>
+      <br /> <br />
+     
+    Loan Start Date: <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         
         <br /><br />
 
